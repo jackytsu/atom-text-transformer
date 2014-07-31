@@ -1,5 +1,5 @@
 {
-    "name": "Text Transformer",
+    "name": "atom-text-transformer",
     "main": "./lib/atom-text-transformer",
     "version": "0.1.0",
     "description": "A utility can modify the word capitalized.",
