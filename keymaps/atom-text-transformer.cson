@@ -1,0 +1,16 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/advanced/keymaps
+'.workspace':
+  'ctrl-alt-u': 'atom-text-transformer:upper',
+  'ctrl-alt-l': 'atom-text-transformer:lower',
+  'ctrl-alt-r': 'atom-text-transformer:reverse',
+  'ctrl-alt-c': 'atom-text-transformer:camel',
+  'ctrl-alt-d': 'atom-text-transformer:dashed',
+  'ctrl-alt-z': 'atom-text-transformer:underline'
