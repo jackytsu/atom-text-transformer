@@ -23,12 +23,12 @@ textTransform = (separator) ->
 
 module.exports =
   activate: (state) ->
-    atom.workspaceView.command "atom-text-transformer:upper", => @upper()
-    atom.workspaceView.command "atom-text-transformer:lower", => @lower()
-    atom.workspaceView.command "atom-text-transformer:reverse", => @reverse()
-    atom.workspaceView.command "atom-text-transformer:camel", => @camel()
-    atom.workspaceView.command "atom-text-transformer:dashed", => @dashed()
-    atom.workspaceView.command "atom-text-transformer:underline", => @underline()
+    atom.views.getView(atom.workspace).command "atom-text-transformer:upper", => @upper()
+    atom.views.getView(atom.workspace).command "atom-text-transformer:lower", => @lower()
+    atom.views.getView(atom.workspace).command "atom-text-transformer:reverse", => @reverse()
+    atom.views.getView(atom.workspace).command "atom-text-transformer:camel", => @camel()
+    atom.views.getView(atom.workspace).command "atom-text-transformer:dashed", => @dashed()
+    atom.views.getView(atom.workspace).command "atom-text-transformer:underline", => @underline()
 
   upper: ->
     editor = atom.workspace.activePaneItem
