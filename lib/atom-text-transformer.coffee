@@ -22,13 +22,13 @@ textTransform = (separator) ->
     selection.insertText(getStringArray(selection.getText()).join(separator), {select: true})
 
 module.exports =
-  activate: (state) ->
-    atom.views.getView(atom.workspace).command "atom-text-transformer:upper", => @upper()
-    atom.views.getView(atom.workspace).command "atom-text-transformer:lower", => @lower()
-    atom.views.getView(atom.workspace).command "atom-text-transformer:reverse", => @reverse()
-    atom.views.getView(atom.workspace).command "atom-text-transformer:camel", => @camel()
-    atom.views.getView(atom.workspace).command "atom-text-transformer:dashed", => @dashed()
-    atom.views.getView(atom.workspace).command "atom-text-transformer:underline", => @underline()
+  activate: ->
+    atom.commands.add 'atom-text-editor', "atom-text-transformer:upper", => @upper()
+    atom.commands.add 'atom-text-editor', "atom-text-transformer:lower", => @lower()
+    atom.commands.add 'atom-text-editor', "atom-text-transformer:reverse", => @reverse()
+    atom.commands.add 'atom-text-editor', "atom-text-transformer:camel", => @camel()
+    atom.commands.add 'atom-text-editor', "atom-text-transformer:dashed", => @dashed()
+    atom.commands.add 'atom-text-editor', "atom-text-transformer:underline", => @underline()
 
   upper: ->
     editor = atom.workspace.activePaneItem

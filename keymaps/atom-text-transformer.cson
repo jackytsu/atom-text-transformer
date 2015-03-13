@@ -7,7 +7,7 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'.atom-workspace':
+'atom-text-editor':
   'ctrl-alt-u': 'atom-text-transformer:upper',
   'ctrl-alt-l': 'atom-text-transformer:lower',
   'ctrl-alt-r': 'atom-text-transformer:reverse',
