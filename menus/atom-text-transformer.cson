@@ -1,25 +1,27 @@
 'context-menu':
-  '.overlayer':
-    'Upper Case': 'atom-text-transformer:upper',
-    'Lower Case': 'atom-text-transformer:lower',
-    'Reverse Case': 'atom-text-transformer:reverse',
-    'Camel Case': 'atom-text-transformer:camel',
-    'Dashed Line': 'atom-text-transformer:dashed',
-    'Underline': 'atom-text-transformer:underline'
+    'atom-text-editor': [{
+        label: 'Text Transformer',
+        submenu: [
+            {label: 'Upper', command: 'atom-text-transformer:upper'}
+            {label: 'Lower', command: 'atom-text-transformer:lower'}
+            {label: 'Reverse', command: 'atom-text-transformer:reverse'}
+            {label: 'Camel', command: 'atom-text-transformer:camel'}
+            {label: 'Dashed', command: 'atom-text-transformer:dashed'}
+            {label: 'Underline', command: 'atom-text-transformer:underline'}
+        ]
+    }]
 
-'menu': [
-  {
-    'label': 'Edit'
-    'submenu': [
-      'label': 'Word Changer'
-      'submenu': [
-        { 'label': 'Upper Case', 'command': 'atom-text-transformer:upper' },
-        { 'label': 'Lower Case', 'command': 'atom-text-transformer:lower' },
-        { 'label': 'Reverse Case', 'command': 'atom-text-transformer:reverse' },
-        { 'label': 'Camel Case', 'command': 'atom-text-transformer:camel' },
-        { 'label': 'Dashed Line', 'command': 'atom-text-transformer:dashed' },
-        { 'label': 'Underline', 'command': 'atom-text-transformer:underline' }
-      ]
+'menu': [{
+    label: 'Edit'
+    submenu: [
+        label: 'Word Changer'
+        submenu: [
+            { label: 'Upper Case', command: 'atom-text-transformer:upper' },
+            { label: 'Lower Case', command: 'atom-text-transformer:lower' },
+            { label: 'Reverse Case', command: 'atom-text-transformer:reverse' },
+            { label: 'Camel Case', command: 'atom-text-transformer:camel' },
+            { label: 'Dashed Line', command: 'atom-text-transformer:dashed' },
+            { label: 'Underline', command: 'atom-text-transformer:underline' }
+        ]
     ]
-  }
-]
+}]

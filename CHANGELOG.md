@@ -1,3 +1,6 @@
+## 0.6.0 - Compatibility Release
+* Upgrading to atom 1.0 API.
+
 ## 0.5.0 - Compatibility Release
 * Upgrading to atom 1.0 API.
 
