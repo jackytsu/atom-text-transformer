@@ -17,7 +17,7 @@ getStringArray = (text) ->
   return str
 
 textTransform = (separator) ->
-  editor = atom.workspace.activePaneItem
+  editor = atom.workspace.getActivePaneItem()
   for selection in editor.getSelections()
     selection.insertText(getStringArray(selection.getText()).join(separator), {select: true})
 
@@ -31,17 +31,17 @@ module.exports =
     atom.commands.add 'atom-text-editor', "atom-text-transformer:underline", => @underline()
 
   upper: ->
-    editor = atom.workspace.activePaneItem
+    editor = atom.workspace.getActivePaneItem()
     for selection in editor.getSelections()
       selection.insertText(selection.getText().toUpperCase(), {select: true})
 
   lower: ->
-    editor = atom.workspace.activePaneItem
+    editor = atom.workspace.getActivePaneItem()
     for selection in editor.getSelections()
       selection.insertText(selection.getText().toLowerCase(), {select: true})
 
   reverse: ->
-    editor = atom.workspace.activePaneItem
+    editor = atom.workspace.getActivePaneItem()
     for selection in editor.getSelections()
       text = selection.getText()
       str = []
@@ -55,16 +55,16 @@ module.exports =
       selection.insertText(str.join(''), {select: true})
 
   camel: ->
-    editor = atom.workspace.activePaneItem
+    editor = atom.workspace.getActivePaneItem()
     for selection in editor.getSelections()
       text = getStringArray(selection.getText()).join('-').replace /(\-[a-z])/g, (w) ->
         w.toUpperCase().replace /\-/, ""
       selection.insertText(text, {select: true})
 
   dashed: ->
-    editor = atom.workspace.activePaneItem
+    editor = atom.workspace.getActivePaneItem()
     textTransform('-')
 
   underline: ->
-    editor = atom.workspace.activePaneItem
+    editor = atom.workspace.getActivePaneItem()
     textTransform('_')
